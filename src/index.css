@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -99,5 +93,45 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Music Player Specific Styles */
+  .music-player-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  }
+
+  .music-card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .music-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(29, 185, 84, 0.2);
+  }
+
+  .equalizer-bar {
+    background: linear-gradient(to top, #1db954, #1ed760);
+    animation: equalizer 1.5s ease-in-out infinite alternate;
+  }
+
+  .equalizer-bar:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .equalizer-bar:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .equalizer-bar:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes equalizer {
+    0% {
+      height: 10%;
+    }
+    100% {
+      height: 100%;
+    }
   }
 }
