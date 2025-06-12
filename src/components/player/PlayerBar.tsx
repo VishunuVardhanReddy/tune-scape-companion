@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { useMusic } from '@/contexts/MusicContext';
-import { Play, Pause, Stop, Volume } from 'lucide-react';
+import { Play, Pause, Volume } from 'lucide-react';
 
 export const PlayerBar: React.FC = () => {
   const { state, dispatch } = useMusic();
